@@ -1,0 +1,56 @@
+#VRML_SIM R2021b utf8
+WorldInfo {
+  coordinateSystem "NUE"
+}
+Viewpoint {
+  orientation -0.2969586360638587 0.8856754422472184 0.35692377262839553 1.761856819271906
+  position 0.5719396178724966 0.8931734963357505 -0.6508636444650424
+  follow "e-puck"
+}
+RectangleArena {
+  translation 0 0 -0.1
+  floorSize 2.2 1.8
+  floorTileSize 2.2 1.8
+  floorAppearance PBRAppearance {
+    baseColorMap ImageTexture {
+      url [
+        "C:/Users/myper/Desktop/Intelligent_Robotics/circuit_line(lab1).jpg"
+      ]
+      repeatS FALSE
+      repeatT FALSE
+      filtering 1
+    }
+    roughness 1
+    metalness 0
+  }
+  wallThickness 0.025
+  wallHeight 0.05
+}
+PointLight {
+  attenuation 0 0 1
+  location 0 0.3 0
+}
+TexturedBackground {
+  texture "mars"
+}
+E-puck {
+  hidden position_0_0 3916.731117144361
+  hidden position_0_1 4587.6616176530015
+  hidden rotation_1 0.9999999999999999 0 0 3.976514535700783
+  hidden rotation_2 -1 0 0 0.9363434119033575
+  translation -0.310523 1.52017e-05 -0.507494
+  rotation -0.00013515299249254703 0.9999999444521914 -0.0003046789830757492 -2.793865307179586
+  controller "my_controller"
+  groundSensorsSlot [
+    E-puckGroundSensors {
+    }
+  ]
+}
+Can {
+  translation 0.22 0.06096265999922461 0.14
+  rotation 0.09688760412114174 -0.965277446458957 -0.24259481347576334 2.800468788612856e-16
+}
+WoodenBox {
+  translation -0.26 0.14 -0.11
+  size 0.3 0.3 0.3
+}

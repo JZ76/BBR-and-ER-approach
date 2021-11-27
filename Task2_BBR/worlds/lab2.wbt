@@ -1,0 +1,126 @@
+#VRML_SIM R2021b utf8
+WorldInfo {
+  coordinateSystem "NUE"
+}
+Viewpoint {
+  orientation 0.9999759617580628 -0.004803820488116593 -0.004999921474871949 4.67236496109364
+  position -0.01499954120062049 3.3085926733278193 -0.17403725652402494
+}
+RectangleArena {
+  floorSize 2.2 1.8
+  floorTileSize 2.2 1.8
+  floorAppearance PBRAppearance {
+    baseColorMap ImageTexture {
+      url [
+        "C:/Users/myper/Desktop/Intelligent_Robotics/floor_texture(lab2).png"
+      ]
+      repeatS FALSE
+      repeatT FALSE
+      filtering 1
+    }
+    roughness 1
+    metalness 0
+  }
+  wallThickness 0.025
+  wallHeight 0.05
+}
+TexturedBackground {
+  texture "factory"
+}
+DEF Light1 SpotLight {
+  attenuation 0 0 0.2
+  beamWidth 0
+  cutOffAngle 0.4
+  direction -1 0 -1
+  intensity 9
+  location 1.1 0 0.9
+  on FALSE
+}
+Can {
+  translation -0.5699429490214943 0.06096281861717558 0.4800190169928353
+  rotation 0.31622776601685243 1.1237014976941556e-13 -0.948683298050509 0.0008702908615464949
+}
+Can {
+  translation 0.69 0.06096265999878803 0.48
+  rotation -0.34142438789991947 0.9367558658531031 0.07692746672657613 3.973510987508431e-17
+  name "can(1)"
+}
+Can {
+  translation -0.5677666264713795 0.06096302056038752 -0.407766626469749
+  rotation 0.7071067811900714 -9.04149098403188e-09 -0.7071067811830237 0.003989954912950915
+  name "can(2)"
+}
+Can {
+  translation 0.45000040207691877 0.06096268119158458 -0.6800000006858171
+  rotation 0.36055366026276187 -0.932736465083374 -0.0019351420868940939 3.6634483041178412e-09
+  name "can(3)"
+}
+DEF Light2 SpotLight {
+  attenuation 0 0 0.2
+  beamWidth 0
+  cutOffAngle 0.4
+  direction 1 0 -1
+  intensity 9
+  location -1.1 0 0.9
+  on FALSE
+}
+DEF Light3 SpotLight {
+  attenuation 0 0 0.2
+  beamWidth 0
+  cutOffAngle 0.4
+  direction 1 0 1
+  intensity 9
+  location -1.1 0 -0.9
+  on FALSE
+}
+DEF Light4 SpotLight {
+  attenuation 0 0 0.2
+  beamWidth 0
+  cutOffAngle 0.4
+  direction -1 0 1
+  intensity 9
+  location 1.1 0 -0.9
+}
+Robot {
+  name "supervisor"
+  controller "supervisor_lab2"
+  supervisor TRUE
+}
+WoodenBox {
+  translation 0.6 0.14 -0.47
+  size 0.3 0.3 0.3
+}
+WoodenBox {
+  translation 0.26 0.14 0.13
+  name "wooden box(2)"
+  size 0.3 0.3 0.3
+}
+WoodenBox {
+  translation -0.75 0.14 0.32
+  name "wooden box(3)"
+  size 0.3 0.3 0.3
+}
+WoodenBox {
+  translation -0.74 0.14 -0.58
+  name "wooden box(1)"
+  size 0.3 0.3 0.3
+}
+DEF Controller E-puck {
+  hidden position_0_0 1786.6896598841809
+  hidden position_0_1 1681.6100800411741
+  hidden linearVelocity_0 0.028348858019583423 1.081632057791261e-06 -0.028281830531927486
+  hidden angularVelocity_0 2.113740104269561e-05 -0.7023830786919323 -8.991096574661165e-07
+  hidden rotation_1 -0.9999999999999999 0 0 2.2650326451782963
+  hidden linearVelocity_1 0.04128793646420847 2.385282118895062e-06 -0.04120322470899315
+  hidden angularVelocity_1 -2.1198941137613048 -0.7171365325288964 -2.122891819054664
+  hidden rotation_2 0.9999999999999999 0 0 2.283582282955061
+  hidden linearVelocity_2 0.015391931449333764 3.2344010435349056e-07 -0.01538441896638591
+  hidden angularVelocity_2 -0.7053420381103918 -0.7046593699156399 -0.7089301730492817
+  translation 0.01632417816162648 -7.64598114865768e-05 -0.043649818444226544
+  rotation -0.0008985165930047059 -0.9999995320324837 0.00035861224983975144 0.7994406321524502
+  controller "e-puck_light_lab2"
+  groundSensorsSlot [
+    E-puckGroundSensors {
+    }
+  ]
+}
